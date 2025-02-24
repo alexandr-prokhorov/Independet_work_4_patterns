@@ -1,4 +1,4 @@
-from data_handler import  Menu_pizza, Ingredients
+from data_handler import Menu_pizza, Ingredients
 from Pizza_factory import PizzaFactory
 from order_manager import OrderManager
 from Admin_panel import AdminPanel
@@ -49,7 +49,6 @@ def main():
                             if stripped_t in available_toppings:
                                 toppings.append(stripped_t)
 
-
                     pizza = PizzaFactory.create_pizza(pizza_type, toppings)
                     if pizza:
                         order_manager.add_order(pizza)
@@ -87,6 +86,7 @@ def main():
         elif user == "3":
             print("Всего доброго!")
             break
+
 
 if __name__ == '__main__':
     main()
